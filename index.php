@@ -20,7 +20,7 @@ session_start();
             </ul>
         </div>
         <h1 id="title">DASHBOARD</h1>
-        <h3 id="username">Hello user</h3>
+        <h3 id="username">Hello, <?php echo $user_data['user_name']; ?></h3>
         <div id="content">
             <div id="employees" class="cards">
                 <div id="employee_card" class="card">
