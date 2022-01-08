@@ -15,9 +15,8 @@ session_start();
 			//save to database
 			$user_id = random_num(20);
 			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
-
+			
 			mysqli_query($con, $query);
-
 			header("Location: login.php");
 			die;
 		}else
@@ -40,8 +39,8 @@ session_start();
         <h1 id="title">Sign Up</h1>
         <input id="text" type="text" name="user_name" placeholder="Username" />
         <input id="text" type="password" name="password" placeholder="Password" />
-
-        <a href="login.php" type="submit" id="button">Sign Up</a>
+		<input id="button" type="submit" value="Signup"><br><br>
+		<a href="login.php"></a><br><br> 
       </form>
     </div>
   </body>
