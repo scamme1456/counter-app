@@ -5,6 +5,7 @@ php -S 127.0.0.1:8000/filename.php
 
 Uruchomienie:
 ```
+Połącz się z VPN ZUTu
 Otwórz Visual Studio -> View -> Terminal
 git clone https://github.com/a-lukasiewicz/clocker-AI-Project.git
 cd clocker-AI-Project
