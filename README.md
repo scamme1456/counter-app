@@ -10,7 +10,7 @@ cd clocker-AI-Project
 git remote -v
 git remote add upstream https://github.com/a-lukasiewicz/clocker-AI-Project.git
 git remote -v
-code -r . __
+code -r .
 ``` 
 Wykonaj polecenia z pierwszej odpowiedzi: https://stackoverflow.com/questions/60678203/is-it-possible-to-use-live-server-for-php-with-autoreload-on-save __
 Prawy przycisk myszki -> reload server __
