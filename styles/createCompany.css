@@ -118,3 +118,10 @@ input {
 #button:hover {
   cursor: pointer;
 }
+
+textarea {
+  width: 25vw;
+  height: 4rem;
+  padding: 1rem;
+  resize: none;
+}
