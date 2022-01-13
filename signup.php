@@ -39,8 +39,8 @@ session_start();
         <h1 id="title">Sign Up</h1>
         <input id="text" type="text" name="user_name" placeholder="Username" />
         <input id="text" type="password" name="password" placeholder="Password" />
-		<input id="button" type="submit" value="Signup"><br><br>
-		<a href="login.php"></a><br><br> 
+		<input id="button" type="submit" value="Signup">
+		<a href="login.php"></a> 
       </form>
     </div>
   </body>
