@@ -4,6 +4,7 @@ session_start();
 	include("config/functions.php");
 	$user_data = check_login($con);
   $company_data = check_company($con);
+
 ?>
 
 <html>

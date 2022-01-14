@@ -3,6 +3,7 @@ session_start();
 	include("config/connection.php");
 	include("config/functions.php");
 
+
   if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		//something was posted
@@ -29,6 +30,7 @@ session_start();
 			echo "Please enter some valid information!";
 		}
 	}
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +46,8 @@ session_start();
         <input id="text" type="text" name="company_name" placeholder="Company name" />
         <input id="text" type="text" name="first_name" placeholder="First name" />
         <input id="text" type="text" name="last_name" placeholder="Last name" />
-		<input id="button" type="submit" value="Create">
+		    <input id="button" type="submit" value="Create">
+
 		<a href="admin.php"></a> 
       </form>
     </div>

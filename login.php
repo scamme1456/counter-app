@@ -25,7 +25,6 @@ session_start();
 					
 					if($user_data['password'] === $password)
 					{
-
 						//jesli program jest tu to poprawne dane uzytkownika
 						$_SESSION['user_id'] = $user_data['user_id'];
 						$user_id = $user_data['user_id'];
@@ -40,7 +39,8 @@ session_start();
 							header("Location: admin_index.php");
 							die;
 						}
-						header("Location: index.php");
+						$_SESSION['user_id'] = $user_data['user_id'];
+						//header("Location: index.php");
 						die;
 					}
 				}

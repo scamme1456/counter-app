@@ -3,6 +3,7 @@ session_start();
 	include("config/connection.php");
 	include("config/functions.php");
 
+
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		//something was posted

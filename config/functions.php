@@ -23,6 +23,7 @@ function check_login($con)
 	die;
 
 }
+
 function check_company($con)
 {
 
@@ -42,7 +43,6 @@ function check_company($con)
 	header("Location: ../login.php");
 	die;
 }
-
 
 
 function random_num($length)
