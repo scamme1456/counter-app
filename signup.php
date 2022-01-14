@@ -12,14 +12,22 @@ session_start();
 
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
-
-			//save to database
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
-			
-			mysqli_query($con, $query);
-			header("Location: login.php");
-			die;
+			// sprawdz czy istnieje juz taki user
+			$query = "select * from users where user_name = '$user_name';";
+			$result = mysqli_query($con,$query);
+			if($result && mysqli_num_rows($result) > 0) // user istnieje
+			{
+				echo "User with this login already exists";
+			}
+			else  // user nie istnieje
+			{
+				$user_id = random_num(20);
+				$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+				
+				mysqli_query($con, $query);
+				header("Location: login.php");
+				die;
+			}
 		}else
 		{
 			echo "Please enter some valid information!";

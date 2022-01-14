@@ -16,7 +16,7 @@ session_start();
     <div id="mainContainer">
       <div id="navigation">
         <ul>
-          <li><a href="add.php">Add user to company</a></li>
+          <li><a href="addUser.php">Add user to company</a></li>
           <li>Generate CSV</li>
           <li><a href="logout.php">Logout</a></li>
         </ul>
