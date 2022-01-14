@@ -14,16 +14,28 @@ session_start();
       $query = "select * from users where user_name = '$user_login' limit 1;";
       $result = mysqli_query($con,$query);
 
-      if($result && mysqli_num_rows($result) > 0) // user istnieje ALE CO JAK JUZ MA FIRME? - DODAC
+      if($result && mysqli_num_rows($result) > 0) // user(pracownik) istnieje
       {
         $user_data = mysqli_fetch_assoc($result);
         $worker_id = $user_data["user_id"];
-        $employment_id = random_num(20);
-        $company_id = $_SESSION['company_id'];
-        $query = "insert into companyWorkers(employment_id,worker_id,company_id) values ('$employment_id','$worker_id','$company_id');";
-        mysqli_query($con, $query);
-        header("Location: admin_index.php");
-        die;
+
+        //sprawdzenie czy juz ma firme
+        $query = "SELECT * FROM companyWorkers WHERE worker_id = '$worker_id';";
+        $result = mysqli_query($con,$query);
+        if($result && mysqli_num_rows($result) > 0) // pracownik juz ma firme
+        {
+          echo "This user is already employed!";
+        }
+        else // pracownik nie ma firmy
+        {
+          //dodanie pracownika
+          $employment_id = random_num(20);
+          $company_id = $_SESSION['company_id'];
+          $query = "insert into companyWorkers(employment_id,worker_id,company_id) values ('$employment_id','$worker_id','$company_id');";
+          mysqli_query($con, $query);
+          header("Location: admin_index.php");
+          die;
+        }
       } 
       else // user nie istnieje
       {

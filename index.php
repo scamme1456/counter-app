@@ -3,6 +3,7 @@ session_start();
 	include("config/connection.php");
 	include("config/functions.php");
 	$user_data = check_login($con);
+    check_employment($con);
 ?>
 
 <html>
