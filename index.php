@@ -14,6 +14,7 @@ session_start();
     <div id="mainContainer">
         <div id="navigation">
             <ul>
+                <li><a href="createCompany.php">Create Company</a></li>
                 <li>My Account</li>
                 <li>Settings</li>
                 <li><a href="logout.php">Logout</a></li>

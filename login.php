@@ -25,9 +25,22 @@ session_start();
 					
 					if($user_data['password'] === $password)
 					{
-
+						//jesli program jest tu to poprawne dane uzytkownika
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
+						$user_id = $user_data['user_id'];
+						
+						//sprawdzenie czy jest sie adminem
+						$query = "SELECT * FROM companies WHERE admin_id='$user_id' limit 1"; //jeden admin moze miec jedna firme
+						$result = mysqli_query($con, $query);
+						if($result && mysqli_num_rows($result) > 0)
+						{
+							$company_data = mysqli_fetch_assoc($result);
+							$_SESSION['company_id'] = $company_data['company_id'];
+							header("Location: admin_index.php");
+							die;
+						}
+						$_SESSION['user_id'] = $user_data['user_id'];
+						//header("Location: index.php");
 						die;
 					}
 				}

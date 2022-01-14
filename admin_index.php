@@ -3,6 +3,8 @@ session_start();
 	include("config/connection.php");
 	include("config/functions.php");
 	$user_data = check_login($con);
+  $company_data = check_company($con);
+
 ?>
 
 <html>
@@ -21,8 +23,8 @@ session_start();
       </div>
       <h1 id="title">DASHBOARD</h1>
       <h3 id="username">
-        Hello,
-        <?php echo $user_data['user_name']; ?>
+        Hello ADMIN,
+        <?php echo $user_data['user_name'] . " of company " . $company_data['company_name'];  ?>
       </h3>
       <div class="select">
         <label for="select">Select project name</label>
