@@ -14,7 +14,7 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  min-height: 100vh;
+  min-height: 120vh;
 }
 
 #mainContainer {
@@ -112,7 +112,7 @@ svg {
 }
 
 #details {
-  padding-top: 2rem;
+  padding: 2rem 0;
   width: 95%;
   height: 25vw;
   display: flex;
