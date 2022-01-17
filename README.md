@@ -1,17 +1,25 @@
 # clocker-AI-Project
 
-# Run live server 
+### Created by
+
+- Antoni Kowalski
+- Michał Zawadzki
+- Paweł Królewski
+- Adam Łukasiewicz
+- Przemysław Bakun
+
+# Run live server
+
 php -S 127.0.0.1:8000/filename.php
 
 Uruchomienie:
+
 ```
 Połącz się z VPN ZUTu
-Otwórz Visual Studio -> View -> Terminal
 git clone https://github.com/a-lukasiewicz/clocker-AI-Project.git
 cd clocker-AI-Project
-git remote add upstream https://github.com/a-lukasiewicz/clocker-AI-Project.git
-code -r .
-Wykonaj polecenia z pierwszej odpowiedzi: https://stackoverflow.com/questions/60678203/is-it-possible-to-use-live-server-for-php-with-autoreload-on-save 
-Prawy przycisk myszki -> reload server 
-Prawy przycisk myszki -> open file in browser 
-``` 
+code .
+```
+
+1. Zainstaluj: https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+2. Kliknij prawy przycisk myszki na wybranym pliku, wybierz opcję PHP Server: Open file in browser
